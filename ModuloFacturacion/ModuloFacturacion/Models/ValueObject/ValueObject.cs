@@ -11,6 +11,8 @@ namespace ModuloFacturacion.Models.ValueObject
         {
             private static readonly Member[] Members = GetMembers().ToArray();
 
+            protected abstract bool CheckValidity(object value);
+
             public override bool Equals(object other)
             {
                 if (ReferenceEquals(null, other)) return false;
