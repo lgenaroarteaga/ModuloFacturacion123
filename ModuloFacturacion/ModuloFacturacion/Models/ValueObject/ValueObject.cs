@@ -7,7 +7,7 @@ using System.Reflection;
 
 namespace ModuloFacturacion.Models.ValueObject
 {
-    public abstract class Value<T> where T : Value<T>
+    public abstract class ValueObject<T> where T : ValueObject<T>
         {
             private static readonly Member[] Members = GetMembers().ToArray();
 
@@ -32,9 +32,9 @@ namespace ModuloFacturacion.Models.ValueObject
                         ? CombineHashCodes(GetEnumerableValues(m.GetValue(this)))
                         : m.GetValue(this)));
 
-            public static bool operator ==(Value<T> left, Value<T> right) => Equals(left, right);
+            public static bool operator ==(ValueObject<T> left, ValueObject<T> right) => Equals(left, right);
 
-            public static bool operator !=(Value<T> left, Value<T> right) => !Equals(left, right);
+            public static bool operator !=(ValueObject<T> left, ValueObject<T> right) => !Equals(left, right);
 
             public override string ToString()
             {
