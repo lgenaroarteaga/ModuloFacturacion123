@@ -165,6 +165,7 @@
     <Compile Include="Models\Entities\InvoiceDetail.cs" />
     <Compile Include="Models\ValueObject\Types\DecimalNonNegative.cs" />
     <Compile Include="Models\ValueObject\Types\NumericNonNegative.cs" />
+    <Compile Include="Models\ValueObject\Types\NumericString.cs" />
     <Compile Include="Models\ValueObject\Types\StringNotNull.cs" />
     <Compile Include="Models\ValueObject\ValueObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
