@@ -6,7 +6,7 @@ using System.Web;
 
 namespace ModuloFacturacion.Models.Entities
 {
-    public class Authorization
+    public class Authorization: IAgregateRoot
     {
         public Guid Id { get; set; }
         public NumericString AuthorizationNumber { set; get; } 
