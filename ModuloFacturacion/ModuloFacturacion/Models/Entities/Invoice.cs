@@ -1,4 +1,4 @@
-﻿using ModuloFacturacion.Models.Types;
+﻿using ModuloFacturacion.Models.ValueObject.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;

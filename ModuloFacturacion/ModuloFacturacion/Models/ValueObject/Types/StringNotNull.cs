@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace ModuloFacturacion.Models.Types
+namespace ModuloFacturacion.Models.ValueObject.Types
 {
     public class StringNotNull : ValueObject<StringNotNull>
     {
