@@ -26,12 +26,9 @@ namespace ModuloFacturacion.Models.ValueObject.Types
             if (value == null || string.IsNullOrWhiteSpace(value.ToString()))
                 throw new ArgumentException("Can't be an empty or null string the name");
             if (!Regex.IsMatch(value.ToString().Trim(), @"^\d+$"))
-            {
                 throw new ArgumentException("String is not a numeric value");
-            }
             String strValue = (String)value;
-            if (strValue.Length > 255)
-                if (strValue.Trim().Length > 255)
+            if (strValue.Trim().Length > 255)
                 throw new ArgumentException("Can't be more than 255 characters long");
             return true;
         }
