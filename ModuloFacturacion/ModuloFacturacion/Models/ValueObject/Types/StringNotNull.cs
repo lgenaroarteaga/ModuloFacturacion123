@@ -22,8 +22,8 @@ namespace ModuloFacturacion.Models.Types
             string.IsNullOrWhiteSpace(value.ToString()))
                 throw new ArgumentException("Can't be an empty or null string the name");
             String strValue = (String)value;
-            if (strValue.Length > 150)
-                throw new ArgumentException("Can't be more than 150 characters long");
+            if (strValue.Length > 255)
+                throw new ArgumentException("Can't be more than 255 characters long");
             return true;
         }
 
