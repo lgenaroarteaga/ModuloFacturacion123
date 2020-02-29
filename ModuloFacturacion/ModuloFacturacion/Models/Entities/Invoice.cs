@@ -6,7 +6,7 @@ using System.Web;
 
 namespace ModuloFacturacion.Models.Entities
 {
-    public class Invoice
+    public class Invoice: IAgregateRoot
     {
         public Guid Id { get; set; }
         public NumericNonNegative InvoiceNumber { get; set; }
