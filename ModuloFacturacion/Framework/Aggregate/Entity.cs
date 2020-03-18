@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 
 namespace Framework.Aggregate
 {
-    public abstract class AggregateRoot<TId> : IInternalEventHandler<EventArgs>
+    public abstract class Entity<TId> : IInternalEventHandler<EventArgs>
         where TId : Value<TId>
     {
         private readonly Action<object> _applier;
@@ -13,9 +13,9 @@ namespace Framework.Aggregate
 
         public TId Id { get; protected set; }
 
-        protected AggregateRoot(Action<object> applier) => _applier = applier;
+        protected Entity(Action<object> applier) => _applier = applier;
 
-        protected AggregateRoot() { }
+        protected Entity() { }
 
         public abstract void When(object source, EventArgs args);
 

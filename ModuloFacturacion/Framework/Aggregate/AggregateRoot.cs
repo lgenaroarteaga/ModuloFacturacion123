@@ -9,17 +9,17 @@ namespace Framework.Aggregate
         where TId : Value<TId>
     {
         public TId Id { get; protected set; }
-
         
-
         private readonly List<object> _changes;
+
+        public event EventHandler<EventArgs> Handle;
 
         protected AggregateRoot()
         {
             _changes = new List<object>();
         }
 
-        protected void Apply(object args)
+        protected void Apply(object source, EventArgs args)
         {
             When(this, args);
             ValidateStatus();
